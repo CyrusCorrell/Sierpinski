@@ -36,6 +36,7 @@ def draw_sierpinski(depth=3):
 
 def main():
     st.title("Fractal Drawer - Cyrus Correll")
+    st.write("Select a depth from the side pannel and press Draw! To get the full experience, start from depth 0 and go from there!"
     st.sidebar.title("Controls")
     depth = st.sidebar.slider("Select Sierpinski Triangle Depth", 0, 7, 3)
     if st.sidebar.button("Draw Sierpinski Triangle"):
@@ -55,15 +56,15 @@ def main():
         elif(depth == 3):
             st.write("For this depth, I chose to leave the center triangle white. This is meant to blend with the background, and represent how we are often very similar to people around us (the three groups comprising the points of this triangle), yet because of the space between us we think we are somehow different. I found a class like HISC 144 fascinating not only because of the engaging content and wonderful professor, this class was special because of the multidisciplinary nature of my peers, which often led to deeper discussions than I have experienced in other classes.")
         elif(depth == 4):
-            st.write("Now we see the first iteration of the Sierpinski process. That is, find the midpoints of the edges of your previous triangle, and use these midpoints to draw a new triangle. This is still a simple shape, yet it stands here with more intention. There is a sense of purpose. I used the colors blue and red to represent divide, as by surrounding ourselves with alternate views we can grow into more holistically knowledgeable people.")
+            st.write("Through adding Yellow as the central triangle for this depth, I tried to emmulate how I view the solar process. The sun connects us all, and as humans we have worshiped it for thousands of years. By having it in the center for this depth, I wanted to signify it's power to connect us in a way that transcends time. Processes, especially ones as enormous as our sun, often look as if they are unchanging compared to our perception of process. That being said, this goes to show the vastly different scales that processes can propagate on.")
         elif(depth == 5):
-            st.write("Now we see the first iteration of the Sierpinski process. That is, find the midpoints of the edges of your previous triangle, and use these midpoints to draw a new triangle. This is still a simple shape, yet it stands here with more intention. There is a sense of purpose. I used the colors blue and red to represent divide, as by surrounding ourselves with alternate views we can grow into more holistically knowledgeable people.")
+            st.write("FOr the 5th depth, I chose to make the center triangle pink, to represent compassion. Compassion, while an untangible concept, is another enormous process that connects each and every one of us. The human experience is closely tied to compassion, which is visible in our music and art. This process is also hidden so deeply because many people go about their day without actively consulting their compassion, acting out of self interest rather than social benefit.")
         elif(depth == 6):
-            st.write("Now we see the first iteration of the Sierpinski process. That is, find the midpoints of the edges of your previous triangle, and use these midpoints to draw a new triangle. This is still a simple shape, yet it stands here with more intention. There is a sense of purpose. I used the colors blue and red to represent divide, as by surrounding ourselves with alternate views we can grow into more holistically knowledgeable people.")
+            st.write("We've officially crossed 1,000 triangles! Just to think, we started with a simple 1, yet through taking the time to observe and question how we view the world, our triangle grew into something infinitely more complex and fascinating. While this simulation only goes up to depth 7 (which is when my computer started slowing down!), I am fascinated by the thought this pattern continues on forever. This is the most interesting aspect of Fractals, as they always invite the viewer to zoom in just a bit farther, as there is always more to question and always more to see.")
         elif(depth == 7):
             st.write("Fractals teach us many things about process ontology. The most important is the fact that there is infinite detail in everything all around us. Question how you view the world, ask yourself how much more you could understand if you look deeper and more intently.")
             
-        st.title("Thank you to Professor Papadopoulos for an amazing class!")
+        st.title("Thank you to Professor Papadopoulos and Anna Yegorova for an amazing class!")
     
 
 if __name__ == "__main__":
