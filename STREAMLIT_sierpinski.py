@@ -10,7 +10,7 @@ def get_mid(p1, p2):
     return ((p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2)
 
 def sierpinski(ax, points, degree):
-    colormap = ['blue', 'red', 'green', 'white', 'yellow', 'violet', 'orange','purple']
+    colormap = ['blue', 'red', 'green', 'white', 'yellow', 'violet', 'orange','purple','black']
     draw_triangle(ax, points, colormap[degree])
     if degree > 0:
         sierpinski(ax, [points[0],
@@ -38,7 +38,7 @@ def main():
     st.title("Fractal Drawer - Cyrus Correll")
     st.write("Select a depth from the side pannel and press Draw! To get the full experience, start from depth 0 and go from there!")
     st.sidebar.title("Controls")
-    depth = st.sidebar.slider("Select Sierpinski Triangle Depth", 0, 7, 3)
+    depth = st.sidebar.slider("Select Sierpinski Triangle Depth", 0, 8, 3)
     if st.sidebar.button("Draw Sierpinski Triangle"):
         draw_sierpinski(depth)
         total_triangles = 0
@@ -60,9 +60,11 @@ def main():
         elif(depth == 5):
             st.write("FOr the 5th depth, I chose to make the center triangle pink, to represent compassion. Compassion, while an untangible concept, is another enormous process that connects each and every one of us. The human experience is closely tied to compassion, which is visible in our music and art. This process is also hidden so deeply because many people go about their day without actively consulting their compassion, acting out of self interest rather than social benefit.")
         elif(depth == 6):
-            st.write("We've officially crossed 1,000 triangles! Just to think, we started with a simple 1, yet through taking the time to observe and question how we view the world, our triangle grew into something infinitely more complex and fascinating. While this simulation only goes up to depth 7 (which is when my computer started slowing down!), I am fascinated by the thought this pattern continues on forever. This is the most interesting aspect of Fractals, as they always invite the viewer to zoom in just a bit farther, as there is always more to question and always more to see.")
+            st.write("We've officially crossed 1,000 triangles! Just to think, we started with a simple 1, yet through taking the time to observe and question how we view the world, our triangle grew into something infinitely more complex and fascinating. While this simulation only goes up to depth 8 (which is when my computer started slowing down!), I am fascinated by the thought this pattern continues on forever. This is the most interesting aspect of Fractals, as they always invite the viewer to zoom in just a bit farther, as there is always more to question and always more to see.")
         elif(depth == 7):
             st.write("Fractals teach us many things about process ontology. The most important is the fact that there is infinite detail in everything all around us. Question how you view the world, ask yourself how much more you could understand if you look deeper and more intently.")
+        elif(depth == 8):
+            st.title("We've reached the end... Thank you for going through this process with me!")
             
         st.title("Thank you to Professor Papadopoulos and Anna Yegorova for an amazing class!")
     
