@@ -30,7 +30,7 @@ def draw_sierpinski(depth=3):
     fig, ax = plt.subplots(figsize=(10,10))
     ax.set_aspect('equal')
     ax.axis('off')
-    my_points = [[3,3], [5, 5], [7, 3]]
+    my_points = [[1,-0.5], [0, 0], [-1, -0.5]]
     sierpinski(ax, my_points, depth)
     st.pyplot(fig)
 
