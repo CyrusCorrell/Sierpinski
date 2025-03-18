@@ -27,7 +27,7 @@ def sierpinski(ax, points, degree):
                    degree-1)
 
 def draw_sierpinski(depth=3):
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(10,10))
     ax.set_aspect('equal')
     ax.axis('off')
     my_points = [[-1,-0.5], [0, 1], [1, 0.5s]]
