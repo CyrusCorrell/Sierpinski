@@ -10,7 +10,7 @@ def get_mid(p1, p2):
     return ((p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2)
 
 def sierpinski(ax, points, degree):
-    colormap = ['blue', 'red', 'green', 'white', 'yellow', 'violet', 'orange']
+    colormap = ['blue', 'red', 'green', 'white', 'yellow', 'violet', 'orange','purple']
     draw_triangle(ax, points, colormap[degree])
     if degree > 0:
         sierpinski(ax, [points[0],
@@ -37,7 +37,11 @@ def draw_sierpinski(depth=3):
 def main():
     st.title("Fractal Drawer")
     st.sidebar.title("Controls")
-    depth = st.sidebar.slider("Select Sierpinski Triangle Depth", 0, 6, 3)
+    depth = st.sidebar.slider("Select Sierpinski Triangle Depth", 0, 7, 3)
+    for i in range(depth):
+        total_triangles += 3*i
+    total_triangles+=1
+    st.title(f"Total triangles: {total_triangles}")
     if st.sidebar.button("Draw Sierpinski Triangle"):
         draw_sierpinski(depth)
 
