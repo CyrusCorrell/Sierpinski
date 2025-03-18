@@ -38,6 +38,7 @@ def main():
     st.title("Fractal Drawer")
     st.sidebar.title("Controls")
     depth = st.sidebar.slider("Select Sierpinski Triangle Depth", 0, 7, 3)
+    total_triangles = 0
     for i in range(depth):
         total_triangles += 3*i
     total_triangles+=1
