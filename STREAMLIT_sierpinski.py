@@ -35,16 +35,19 @@ def draw_sierpinski(depth=3):
     st.pyplot(fig)
 
 def main():
-    st.title("Fractal Drawer")
+    st.title("Fractal Drawer - Cyrus Correll")
     st.sidebar.title("Controls")
     depth = st.sidebar.slider("Select Sierpinski Triangle Depth", 0, 7, 3)
-    total_triangles = 0
-    for i in range(1,depth+1):
-        total_triangles += np.power(3,i)
-    total_triangles+=1
-    st.title(f"Total triangles: {total_triangles}")
     if st.sidebar.button("Draw Sierpinski Triangle"):
         draw_sierpinski(depth)
+        total_triangles = 0
+        for i in range(1,depth+1):
+            total_triangles += np.power(3,i)
+        total_triangles+=1
+        st.title(f"Total triangles: {total_triangles}")
+        st.text("Fractals teach us many things about process ontology. The most important is the fact that there is infinite detail in everything all around us. Question how you view the world, ask yourself how much more you could understand if you look deeper and more intently.")
+        st.title("Thank you to Professor Papadopoulos for an amazing class!")
+    
 
 if __name__ == "__main__":
     main()
