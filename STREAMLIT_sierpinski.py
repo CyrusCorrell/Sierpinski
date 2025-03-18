@@ -38,7 +38,7 @@ def main():
     st.title("Fractal Drawer - Cyrus Correll")
     st.write("Select a depth from the side pannel and press Draw! To get the full experience, start from depth 0 and go from there!")
     st.sidebar.title("Controls")
-    depth = st.sidebar.slider("Select Sierpinski Triangle Depth", 0, 8, 3)
+    depth = st.sidebar.slider("Select Sierpinski Triangle Depth", 0, 8, 0)
     if st.sidebar.button("Draw Sierpinski Triangle"):
         draw_sierpinski(depth)
         total_triangles = 0
